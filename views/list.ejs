@@ -1,0 +1,33 @@
+<!-- views/list.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Liste des Informations</title>
+</head>
+<body>
+    <div class="list-container">
+        <h1>Liste des Informations</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Photo</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% informations.forEach((info, index) => { %>
+                    <tr>
+                        <td><%=info.photo %></td>
+                        <td><%= info.nom %></td>
+                        <td><%= info.prenom %></td>
+                        <td class="options">
+                            <a href="/edit/<%= index %>">Modifier</a> |
+                            <a href="/delete/<%= index %>" class="delete">Supprimer</a>
+                        </td>
+                    </tr>
+                <% }); %>

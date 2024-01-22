@@ -1,0 +1,44 @@
+<!-- views/form.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Formulaire</title>
+</head>
+<body>
+    <div class="form-container">
+        <h1>S'inscrire</h1>
+        <form action="/submit" method="post">
+            <div class="form-group">
+                <label for="login">
+                    <i class="fas fa-user"></i> Login:
+                </label>
+                <input type="text" id="login" name="login" required>
+            </div>
+            <div class="form-group">
+                <label for="password">
+                    <i class="fas fa-lock"></i> Mot de passe:
+                </label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+            <div class="form-group">
+                <label for="prenom">Prénom:</label>
+                <input type="text" id="prenom" name="prenom" required>
+            </div>
+            <div class="form-group">
+                <label for="photo">
+                    <i class="fas fa-camera"></i> Photo:
+                </label>
+                <input type="file" id="photo" name="photo" accept="image/*">
+            </div>
+            <button type="submit">S'inscrire</button>
+        </form>
+    </div>
+</body>
+</html>
